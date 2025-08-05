@@ -1,0 +1,7 @@
+*.txt
+*.scr
+*.csv
+
+.venv/
+
+!requirements.txt
