@@ -8,10 +8,14 @@ import random
 # Extract from ID command at AutoCAD
 # This should be the coordinates of the polygon vertices
 poly_coords = [
-        (0.1600, 0.0258),
-        (0.1054, 0.0750),
-        (0.1054, 0.0850),
-        (0.1600, 0.1342)
+        (0.0000, 0.1283),
+        (-0.0750, 0.0850),
+        (-0.0850, 0.0850),
+        (-0.1600, 0.1283),
+        (-0.1600, 0.0317),
+        (-0.0850, 0.0750),
+        (-0.0750, 0.0750),
+        (0.0000, 0.0317)
 ]
 
 radius = 0.0004 # Radius of the spheres in meters (Should correspond to the dopant atom size)
@@ -36,10 +40,10 @@ volume = area * ((z_max - z_min) * nm_per_unit) # in cubic nanometers
 # Determine the number of spheres to generate
 
 # Calculated approach based on doping density
-doping_density = 1e19 # atoms per cubic centimeter
-n_spheres = int(doping_density * (volume * cm_per_nm ** 3))
+# doping_density = 1e19 # atoms per cubic centimeter
+# n_spheres = int(doping_density * (volume * cm_per_nm ** 3))
 # Manually set n_spheres if needed
-# n_spheres = 300  # Uncomment to use a fixed number of spheres
+n_spheres = 5000  # Uncomment to use a fixed number of spheres
 
 # === GENERATE SPHERE CENTRES ===
 sphere_centres = []
